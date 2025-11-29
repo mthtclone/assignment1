@@ -1,4 +1,4 @@
-@layer reset, base;
+@layer reset, base, nav;
 
 @layer reset {
     * {
@@ -12,4 +12,27 @@
     body { 
         font-family: sans-serif; 
     }
+}
+
+@layer nav {
+    header {
+        background-color: #ff8c31;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    header > h1 {
+        margin: 0;
+    }
+    nav {
+        margin-top: 1rem;
+    }
+    nav > a {
+        text-decoration: none;
+        color: white;
+        margin: 0 1rem;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+    }
+    
 }
