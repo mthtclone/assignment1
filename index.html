@@ -7,6 +7,8 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
   </head>
 <body>
    <a href="#main" class="skip-to-content">Skip to main content</a>
@@ -19,9 +21,7 @@
       <nav class="nav-list" aria-label="Main Navigation">
         <ul>
           <li><a href="#schedule" tabindex="0">Schedule</a></li>
-          <li><a href="#resources" tabindex="0">Resources</a></li>
-          <li><a href="#events" tabindex="0">Event</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" tabindex="0">Contact</a></li>
         </ul>
       </nav>
   
@@ -32,46 +32,59 @@
       </button>
     </div>
   
-    <a href="#" class="register-button">Register</a>
+    <div class="header-actions">
+      <svg fill="#ff0000" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M0,69.889v108.263h160.468c-1.89-5.039-2.931-10.49-2.931-16.182c0-25.482,20.731-46.213,46.214-46.213 c11.529,0,22.607,4.303,31.194,12.116l0.177,0.164l47.378,44.529l47.554-44.693c8.587-7.813,19.665-12.116,31.194-12.116 c25.482,0,46.214,20.731,46.214,46.213c0,5.691-1.041,11.142-2.931,16.182H455V69.889H0z"></path> <path d="M361.986,178.152c8.598-0.388,15.477-7.49,15.477-16.182c0-8.94-7.273-16.213-16.214-16.213 c-4.012,0-7.889,1.504-10.929,4.237l-29.959,28.157H361.986z"></path> <path d="M327.5,315.757h-30V208.156c-8.814-0.002-21.186-0.002-30,0v67.601h-30v-67.595L0,208.152v176.958h455V208.153l-127.5,0.01 V315.757z"></path> <path d="M244.639,178.152l-29.959-28.157c-3.04-2.733-6.917-4.237-10.929-4.237c-8.94,0-16.214,7.273-16.214,16.213 c0,8.692,6.879,15.794,15.477,16.182H244.639z"></path> </g> </g></svg>
+    <a href="#" class="register-button">Gift</a>
+      <nav class="skip-sections" aria-label="Skip to Sections">
+        <ul>
+          <li><a href="#introduction" class="skip-section-link">Go to Introduction</a></li>
+          <li><a href="#eventInfo" class="skip-section-link">Go to Event Info</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
    <main id="main">
     <section class="hero-section" aria-labelledby="hero-title">
       <img
-        src="https://placehold.co/1600x700"
+        src="/assets/campus.jpg"
         alt="Event Banner Image"
         class="hero-bg"
         role="img"
       >
 
       <div class="hero-overlay-box">
-        <h1 id="hero-title" class="hero-title">Heading</h1>
+        <h1 id="hero-title" class="hero-title">Christmas Event</h1>
         <p class="hero-tagline">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus. Nunc rutrum nec turpis sed dignissim. Cras vulputate elit in auctor tempor. Nullam vestibulum arcu enim, tincidunt mollis est sollicitudin sed.
+          Join us on December 24 for a heartfelt Christmas celebration filled with cherished traditions, inspiring performances, and the true warmth of the holiday season. This special evening brings together our students, teachers, and families as they share music, creativity, and festive joy. We invite you to experience the magic of Christmas through beautifully prepared presentations that reflect the spirit of unity and togetherness in our school community.
         </p>
 
         <div class="hero-details">
           <p>
-            <span class="hero-detail-label">Date</span><span class="hero-detail-value">Dec 15, 2025</span>
+            <span class="hero-detail-label">Date</span><span class="hero-detail-value">Dec 24, 2025</span>
           </p>
           <p>
             <span class="hero-detail-label">Location</span><span class="hero-detail-value">On Campus at ILC</span>
           </p>
         </div>
       </div>
+
+      <div class="hero-bottom-left">
+        <h2>International Leadership College</h2>
+      </div>
     </section>
 
     <section class="vertical-block block-one">
-      <div class="block-one-content">
+      <div class="block-one-content" id="introduction">
     
         <div class="block-one-images">
           <img
-            src="https://placehold.co/600x400"
+            src="/assets/card1.png"
             alt="Landscape placeholder image"
             class="block-img landscape-img"
           />
     
           <img
-            src="https://placehold.co/600x400"
+            src="/assets/card2.png"
             alt="Portrait placeholder image"
             class="block-img portrait-img"
           />
@@ -79,19 +92,105 @@
     
         <div class="block-one-cards">
           <div class="info-card">
-            <h3>Heading 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus.</p>
+            <h3>Gift Exchange</h3>
+            <p>Participants will take part in a gift exchange where each person brings a wrapped present worth at least 10,000 Kyats.
+              This activity encourages sharing, excitement, and surprise among everyone.
+            </p>
           </div>
     
           <div class="info-card card-two">
-            <h3>Heading 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus.</p>
+            <h3>Style Showdown</h3>
+            <p>We will have a mini fashion contest where students can showcase their best Christmas or winter-themed outfits.
+              Awards will be given to the most fashionable participants, such as:
+            </p>
+
+            <p>
+              Best Dressed, Most Creative Outfit, Best Christmas Theme Look.
+            </p>
           </div>
     
           <div class="info-card card-three">
-            <h3>Heading 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus.</p>
+            <h3>Marshmallow Treat Station</h3>
+            <p>Students will be able to enjoy soft, delicious marshmallows.
+              You may set it up as: Marshmallow feeding station, Hot chocolate with marshmallows.</p>
           </div>
+
+          <div class="info-card card-four">
+            <h3>Movie Night</h3>
+            <p>A cozy movie night will be arranged with Christmas-themed films.
+              Students can sit together, relax, and enjoy a festive movie after the main event activities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="horizontal-scroll-section" id="eventInfo">
+      <div class="horizontal-scroll-top">
+        <p class="horizontal-scroll-desc">
+          Celebrate the spirit of Christmas at our college with a day full of fun, music, and holiday cheer! From exciting activities to delicious treats, there’s something for everyone to enjoy. Scroll through the highlights of our festive event below.
+        </p>
+
+        <div class="extra-info">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 512 512">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="40" d="M196 220h64v172"/>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="40" d="M187 396h138"/>
+            <path fill="currentColor" d="M256 160a32 32 0 1 1 32-32a32 32 0 0 1-32 32"/>
+          </svg>
+
+          <div class="extra-info-text">
+            <p>
+              Join our Secret Santa gift exchange and bring a wrapped present to share. Take part in the Style Showdown to showcase your festive outfits. Enjoy the Marshmallow and Hot Chocolate Station with delicious treats. Relax during the Festive Movie Screening and end the day with a memorable group photo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="horizontal-scroll-middle">
+        <img class="middle-image" src="/assets/middle.jpg" alt="Middle Picture">
+      </div>
+
+      <div class="horizontal-scroll-bar">
+        <button class="foward">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10l-10 10Z"/>
+          </svg>
+        </button>
+        <button class="backward">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M16 22L6 12L16 2l1.775 1.775L9.55 12l8.225 8.225L16 22Z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="horizontal-scroll-wrapper">
+
+         <!-- <div class="scroll-item image-item">
+          <img src="https://placehold.co/500x300" alt="Highlight image" />
+        </div> -->
+
+        <div class="scroll-item text-item item-2">
+          <p>
+            Enjoy a variety of festive games and interactive challenges throughout the event. 
+            From ornament crafting to a holiday trivia mini-contest, everyone can join in the fun 
+            and make memories with friends.
+          </p>
+        </div>
+    
+        <div class="scroll-item mixed-item">
+          <img src="/assets/Marshmallows_Hot_Chocolate_Ingredients.jpg" alt="Mixed card image" />
+          <div class="mixed-text">
+            <h3>Holiday Treats</h3>
+            <p>
+              Visit the snack tables for warm pastries, seasonal desserts, and fresh hot chocolate. 
+          Try our limited-time Christmas cookies and enjoy a cozy break between activities.
+            </p>
+          </div>
+        </div>
+
+        <div class="scroll-item text-item item-3">
+          <p>
+            Enjoy the cozy Christmas!
+          </p>
         </div>
       </div>
     </section>
@@ -103,54 +202,75 @@
         <div class="schedule-item left">
           <div class="schedule-card">
             <div class="time">9:00 AM</div>
-            <h3>Heading 1</h3>
+            <h3>Opening & Welcome</h3>
           </div>
           <div class="schedule-desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus. Nunc rutrum nec turpis sed dignissim. Cras vulputate elit in auctor tempor. Nullam vestibulum arcu enim, tincidunt mollis est sollicitudin sed.</p>
+            <p>Kick off the Christmas festivities with a warm welcome from the college principal and student council. Enjoy a brief overview of today’s exciting activities and surprises ahead.</p>
           </div>
         </div>
     
         <div class="schedule-item right">
           <div class="schedule-card">
             <div class="time">10:00 AM</div>
-            <h3>Heading 2</h3>
+            <h3>Gift Exchange</h3>
           </div>
           <div class="schedule-desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus. Nunc rutrum nec turpis sed dignissim. Cras vulputate elit in auctor tempor. Nullam vestibulum arcu enim, tincidunt mollis est sollicitudin sed.</p>
+            <p>All participants join in a fun Secret Santa gift exchange. Each student brings a wrapped present worth at least 10,000 Kyats. Get ready for laughs, surprises, and festive cheer!</p>
           </div>
         </div>
     
         <div class="schedule-item left">
           <div class="schedule-card">
             <div class="time">11:30 AM</div>
-            <h3>Heading 3</h3>
+            <h3>Style Showdown</h3>
           </div>
           <div class="schedule-desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus. Nunc rutrum nec turpis sed dignissim. Cras vulputate elit in auctor tempor. Nullam vestibulum arcu enim, tincidunt mollis est sollicitudin sed.</p>
+            <p>Show off your best Christmas or winter-themed outfit in a mini fashion contest. Awards will be given for Best Dressed, Most Creative Outfit, and Best Christmas Theme Look. Snap photos and cheer on your friends!</p>
           </div>
         </div>
     
         <div class="schedule-item right">
           <div class="schedule-card">
             <div class="time">1:00 PM</div>
-            <h3>Heading 4</h3>
+            <h3>Lunch & Social Time</h3>
           </div>
           <div class="schedule-desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus. Nunc rutrum nec turpis sed dignissim. Cras vulputate elit in auctor tempor. Nullam vestibulum arcu enim, tincidunt mollis est sollicitudin sed.</p>
+            <p>Refuel with a festive lunch spread including seasonal treats, snacks, and beverages. This is also a great time to mingle, make new friends, and enjoy the holiday atmosphere.</p>
           </div>
         </div>
     
         <div class="schedule-item left">
           <div class="schedule-card">
-            <div class="time">3:00 PM</div>
-            <h3>Heading 5</h3>
+            <div class="time">2:00 PM</div>
+            <h3>Marshmallow & Hot Chocolate Station</h3>
           </div>
           <div class="schedule-desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed pellentesque sem. Sed porta vel leo at viverra. Fusce dapibus dui a venenatis efficitur. Duis semper, enim at tincidunt consectetur, ante nunc ullamcorper purus, et facilisis arcu turpis vitae libero. Curabitur est urna, molestie at urna id, ultricies bibendum lacus. Nunc rutrum nec turpis sed dignissim. Cras vulputate elit in auctor tempor. Nullam vestibulum arcu enim, tincidunt mollis est sollicitudin sed.</p>
+            <p>Indulge in soft marshmallows and creamy hot chocolate. Set up a DIY marshmallow feeding or make your own hot cocoa creations. Fun for all ages!</p>
+          </div>
+        </div>
+    
+        <div class="schedule-item right">
+          <div class="schedule-card">
+            <div class="time">3:30 PM</div>
+            <h3>Movie Night</h3>
+          </div>
+          <div class="schedule-desc">
+            <p>Wind down the day with a cozy Christmas-themed movie screening. Sit back, relax, and enjoy a heartwarming story to end the celebration on a cheerful note.</p>
+          </div>
+        </div>
+    
+        <div class="schedule-item left">
+          <div class="schedule-card">
+            <div class="time">5:00 PM</div>
+            <h3>Closing & Group Photo</h3>
+          </div>
+          <div class="schedule-desc">
+            <p>Gather everyone for a group photo to capture the memories of this joyful event. Farewell messages and announcements for upcoming college activities will follow.</p>
           </div>
         </div>
       </div>
     </section>
+
 
     <section class="college-bar">
       <div class="college-bar-content">
@@ -161,7 +281,7 @@
     </section>
    </main>
    <footer>
-    <div class="footer-container">
+    <div class="footer-container" id="contact">
       <section class="footer-contact" aria-labelledby="footer-contact-heading">
         <h2 id="footer-contact-heading">International Leadership College</h2>
         <address>
@@ -177,7 +297,7 @@
         <nav aria-label="Social Media Links">
           <ul class="social-links">
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer" aria-label="ILC's TikTok Account">
+              <a href="https://www.tiktok.com/@ilc_tiktok?_r=1&_t=ZS-91uM9HkVNJN" target="_blank" rel="noopener noreferrer" aria-label="ILC's TikTok Account">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02c.08 1.53.63 3.09 1.75 4.17c1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97c-.57-.26-1.1-.59-1.62-.93c-.01 2.92.01 5.84-.02 8.75c-.08 1.4-.54 2.79-1.35 3.94c-1.31 1.92-3.58 3.17-5.91 3.21c-1.43.08-2.86-.31-4.08-1.03c-2.02-1.19-3.44-3.37-3.65-5.71c-.02-.5-.03-1-.01-1.49c.18-1.9 1.12-3.72 2.58-4.96c1.66-1.44 3.98-2.13 6.15-1.72c.02 1.48-.04 2.96-.04 4.44c-.99-.32-2.15-.23-3.02.37c-.63.41-1.11 1.04-1.36 1.75c-.21.51-.15 1.07-.14 1.61c.24 1.64 1.82 3.02 3.5 2.87c1.12-.01 2.19-.66 2.77-1.61c.19-.33.4-.67.41-1.06c.1-1.79.06-3.57.07-5.36c.01-4.03-.01-8.05.02-12.07z"/>
                 </svg> 
@@ -185,15 +305,7 @@
             </li>
 
             <li>
-              <a href="" target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M12 0C8.74 0 8.333.015 7.053.072C5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053C.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384a5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913c.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071c1.17.055 1.805.249 2.227.415c.562.217.96.477 1.382.896c.419.42.679.819.896 1.381c.164.422.36 1.057.413 2.227c.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382a3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413c-1.274.057-1.649.07-4.859.07c-3.211 0-3.586-.015-4.859-.074c-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899a3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235c-.045-1.26-.061-1.649-.061-4.844c0-3.196.016-3.586.061-4.861c.061-1.17.255-1.814.42-2.234c.21-.57.479-.96.9-1.381c.419-.419.81-.689 1.379-.898c.42-.166 1.051-.361 2.221-.421c1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324a6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4s4 1.79 4 4s-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0a1.44 1.44 0 0 1 2.88 0z"/>
-                </svg>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.facebook.com/share/199Qn69MLS/" target="_blank" rel="noopener">
+              <a href="https://www.facebook.com/share/199Qn69MLS/" target="_blank" rel="noopener" aria-label="ILC's Linkedln Account">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 20 20">
                   <path fill="currentColor" fill-rule="evenodd" d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.792C0 19.506.494 20 1.104 20h9.578v-7.745H8.076V9.237h2.606V7.01c0-2.584 1.578-3.99 3.883-3.99c1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.596-1.496 1.47v1.927h2.989l-.39 3.018h-2.6V20h5.097c.61 0 1.104-.494 1.104-1.104V1.104C20 .494 19.506 0 18.896 0Z"/>
               </svg>
@@ -210,5 +322,6 @@
       </section>
     </div>
   </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
