@@ -199,7 +199,7 @@ content;
 	}
 
 	.register-button:active {
-		transform: translateY(-50%) scale(0.95);
+		transform: translateY(-10%) scale(0.95);
 	}
 
 	.register-button:focus-visible {
@@ -215,18 +215,14 @@ content;
 		display: flex;
 		align-items: center;
 		gap: 12px;
-		/* space between SVG and button */
 		position: relative;
-		/* keep positioning context for absolute elements if needed */
 	}
 
 	.header-actions svg {
 		flex-shrink: 0;
-		/* prevent SVG from shrinking */
 		width: 42px;
 		height: 42px;
 	}
-
 }
 
 /* Skip to main content */
@@ -761,7 +757,85 @@ content;
 		background-color: var(--gray-600);
 	}
 
+	.form-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
+	.form-container {
+		width: 100%;
+		max-width: 500px;
+		padding: 30px;
+		border-radius: 14px;
+		text-align: center;
+	}
+	  
+	.form-title {
+		text-align: center;
+		font-size: 4rem;
+		font-weight: 600;
+		margin-bottom: 25px;
+		color: #222;
+	}	  
+
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 18px;
+		width: 100%;
+	}
+
+	.user-detail,
+	.option-box {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		gap: 1rem;
+	}
+
+	.input-box input,
+	#opt,
+	.form-button input[type="submit"] {
+		width: 100%;
+		max-width: 320px;
+		padding: 12px 14px;
+		border-radius: 8px;
+		border: 1px solid #dcdcdc;
+		background: #fafafa;
+		transition: border-color 0.25s ease, background 0.25s ease;
+	}
+
+	.input-box .details,
+	.gift-option {
+		text-align: center;
+		margin-bottom: 6px;
+		font-size: 1.4rem;
+		color: #333;
+	}
+
+	.input-box input:focus,
+	#opt:focus {
+		border-color: #000;
+		outline: none;
+	}
+	
+	.form-button input[type="submit"] {
+		border: none;
+		background: #000;
+		color: #fff;
+		font-size: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: background 0.25s ease;
+	}
+	  
+	.form-button input[type="submit"]:hover {
+		background: #333;
+	}
+
+	  
 }
 
 @layer footer {
