@@ -79,12 +79,18 @@ html {
 	scroll-behavior: auto;
 }
 
+/* -------------------
+   CSS Layers
+   ------------------- */
 @layer reset,
 base,
 footer,
 nav,
 content;
 
+/* -------------------
+   Reset Layer
+   ------------------- */
 @layer reset {
 	* {
 		margin: 0;
@@ -93,6 +99,9 @@ content;
 	}
 }
 
+/* -------------------
+   Base Layer
+   ------------------- */
 @layer base {
 	body {
 		font-family: var(--primary-font);
@@ -109,6 +118,9 @@ content;
 	}
 }
 
+/* -------------------
+   Nav / Header Layer
+   ------------------- */
 @layer nav {
 	header {
 		display: flex;
@@ -209,6 +221,9 @@ content;
 	.hamburger-menu {
 		display: none;
 		cursor: pointer;
+		background: transparent;
+		border: none;
+		padding: 6px;
 	}
 
 	.header-actions {
@@ -225,6 +240,9 @@ content;
 	}
 }
 
+/* -------------------
+   Skip / Accessibility (outside layers intentionally)
+   ------------------- */
 /* Skip to main content */
 .skip-to-content {
 	position: absolute;
@@ -292,6 +310,9 @@ content;
 	pointer-events: auto;
 }
 
+/* -------------------
+   Content Layer
+   ------------------- */
 @layer content {
 	.hero-section {
 		width: 100%;
@@ -834,10 +855,11 @@ content;
 	.form-button input[type="submit"]:hover {
 		background: #333;
 	}
-
-	  
 }
 
+/* -------------------
+   Footer Layer
+   ------------------- */
 @layer footer {
 	footer {
 		width: 100%;
@@ -978,5 +1000,509 @@ content;
 	.cta-button:focus-visible:active {
 		transform: scale(0.95);
 		box-shadow: inset 0px 5px 10px -8px #FFFFFF;
+	}
+}
+
+/* ************************************
+    RESPONSIVE FIXES (Full redesign)
+    Breakpoints: 1200, 992, 768, 576
+************************************* */
+
+/* -----------------------
+   Large screens down to 1200px
+   (slightly reduce wide fixed widths)
+   ----------------------- */
+@media (max-width: 1200px) {
+	.header-container {
+		width: 94%;
+		padding: 10px 18px;
+	}
+
+	.hero-overlay-box {
+		width: 420px;
+		padding: 1.6rem;
+	}
+
+	.hero-details {
+		width: 380px;
+	}
+
+	.schedule-card,
+	.schedule-desc {
+		width: 600px;
+	}
+
+	.horizontal-scroll-desc {
+		width: 1100px;
+	}
+
+	.scroll-item {
+		width: 520px;
+		height: 420px;
+	}
+
+	.scroll-item.text-item.item-3 p {
+		font-size: 6.5rem;
+	}
+}
+
+/* -----------------------
+   Tablet layout tweaks (<= 992px)
+   ----------------------- */
+@media (max-width: 992px) {
+	/* Header / Nav */
+	.header-container {
+		width: 96%;
+		border-radius: 40px;
+		padding: 8px 14px;
+	}
+
+	.nav-list ul {
+		gap: 14px;
+		font-size: 1.2rem;
+	}
+
+	.logo-section img {
+		width: 64px;
+		height: 64px;
+	}
+
+	.register-button {
+		padding: 0.55rem 1.2rem;
+		font-size: 1rem;
+	}
+
+	/* Hero */
+	.hero-overlay-box {
+		width: 360px;
+		right: 8px;
+		bottom: 16px;
+		padding: 1.2rem;
+	}
+
+	.hero-title {
+		font-size: 2.1rem;
+	}
+
+	.hero-tagline {
+		font-size: 1.05rem;
+	}
+
+	.hero-details {
+		width: 320px;
+	}
+
+	.hero-bottom-left {
+		width: 360px;
+		font-size: 0.95rem;
+	}
+
+	/* Block one */
+	.block-one-content {
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+
+	.block-one-images {
+		gap: 1rem;
+	}
+
+	.block-one-cards {
+		width: 90%;
+	}
+
+	/* Schedule */
+	.time {
+		font-size: 2.4rem;
+		width: 160px;
+	}
+
+	.schedule-card,
+	.schedule-desc {
+		width: 520px;
+	}
+
+	/* Horizontal scroll */
+	.horizontal-scroll-desc {
+		width: 900px;
+		font-size: 1.25rem;
+	}
+
+	.scroll-item {
+		width: 480px;
+		height: 420px;
+	}
+}
+
+/* -----------------------
+   Mobile landscape & small tablets (<= 768px)
+   Major layout changes: stack columns, show hamburger
+   ----------------------- */
+@media (max-width: 768px) {
+	/* ---------- Header ---------- */
+	header {
+		margin: 12px;
+		top: 12px;
+	}
+
+	.header-container {
+		width: 100%;
+		border-radius: 28px;
+		padding: 8px 12px;
+		gap: 8px;
+	}
+
+	.logo-section img {
+		width: 54px;
+		height: 54px;
+	}
+
+	.nav-list {
+		flex: 0 0 auto;
+	}
+
+	.nav-list ul {
+		display: none; /* hide desktop nav */
+	}
+
+	.hamburger-menu {
+		display: block;
+	}
+
+	/* active mobile nav (toggle .active with JS) */
+	.nav-list.active {
+		position: absolute;
+		top: 72px;
+		right: 12px;
+		width: calc(100% - 24px);
+		background: #111;
+		border-radius: 12px;
+		padding: 12px;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+	}
+
+	.nav-list.active ul {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nav-list.active ul li a {
+		color: #fff;
+		font-size: 1.25rem;
+		padding: 8px 12px;
+		display: block;
+	}
+
+	.register-button {
+		padding: 0.5rem 1rem;
+		font-size: 1rem;
+	}
+
+	/* Header actions & skip sections */
+	.header-actions svg {
+		width: 36px;
+		height: 36px;
+	}
+	.skip-sections {
+		top: 12%;
+		padding: 1rem;
+		right: 0;
+	}
+
+	/* ---------- Hero ---------- */
+	.hero-section {
+		height: auto;
+		min-height: 70vh;
+		margin-top: -80px;
+		align-items: flex-end;
+	}
+
+	.hero-overlay-box {
+		position: static;
+		width: 100%;
+		margin: 0;
+		padding: 1rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+		background: rgba(255,255,255,0.98);
+	}
+
+	.hero-title {
+		font-size: 1.8rem;
+		text-align: center;
+	}
+
+	.hero-tagline {
+		font-size: 1rem;
+		line-height: 1.5;
+		color: var(--gray-600);
+		text-align: center;
+	}
+
+	.hero-details {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: center;
+	}
+
+	.hero-detail-label,
+	.hero-detail-value {
+		display: inline-block;
+		font-size: 1rem;
+		padding: 0.35rem 0.6rem;
+	}
+
+	.hero-bottom-left {
+		position: static;
+		width: 100%;
+		padding: 0.6rem;
+		text-align: center;
+		font-size: 0.95rem;
+	}
+
+	/* ---------- Block One (stack) ---------- */
+	.block-one-content {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 1rem;
+		gap: 1.5rem;
+		align-items: center;
+	}
+
+	.block-one-images {
+		width: 90%;
+		flex-direction: row;
+		gap: 12px;
+		justify-content: center;
+	}
+
+	.block-one-images .block-img {
+		width: 48%;
+		box-shadow: 8px 5px 0px -1px #3A3A3A;
+	}
+
+	.block-one-cards {
+		width: 94%;
+		margin: 0;
+		gap: 14px;
+	}
+
+	.block-one .info-card {
+		padding: 1.25rem 1.35rem;
+	}
+
+	/* ---------- Horizontal Scroll Section ---------- */
+	.horizontal-scroll-top {
+		flex-direction: column;
+		gap: 12px;
+		padding: 12px;
+	}
+
+	.horizontal-scroll-desc {
+		width: 100%;
+		font-size: 1rem;
+		margin-bottom: 18px;
+	}
+
+	.horizontal-scroll-middle {
+		margin: 18px 0;
+	}
+
+	.horizontal-scroll-wrapper {
+		gap: 12px;
+		padding-bottom: 12px;
+	}
+
+	.scroll-item {
+		width: 86vw;
+		height: auto;
+		min-height: 320px;
+	}
+
+	.scroll-item.text-item.item-3 p {
+		font-size: 5.5rem;
+	}
+
+	/* ---------- Schedule ---------- */
+	.schedule-section {
+		padding: 2rem 1rem;
+	}
+
+	.schedule-title {
+		font-size: 6rem;
+		margin-bottom: 1rem;
+	}
+
+	.schedule-container {
+		gap: 12px;
+	}
+
+	.schedule-item {
+		flex-direction: column;
+		align-items: center;
+		padding: 1.25rem;
+		text-align: center;
+	}
+
+	.time {
+		font-size: 2rem;
+		width: auto;
+		min-width: auto;
+	}
+
+	.schedule-card,
+	.schedule-desc {
+		width: 100%;
+	}
+
+	.schedule-card {
+		padding: 1rem;
+		width: 100%;
+	}
+
+	/* ---------- Form ---------- */
+	.form-container {
+		width: 92%;
+		max-width: 640px;
+		padding: 22px;
+	}
+
+	.form-title {
+		font-size: 2.2rem;
+		margin-bottom: 18px;
+	}
+
+	.user-detail,
+	.option-box {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.input-box input,
+	#opt,
+	.form-button input[type="submit"] {
+		max-width: 100%;
+	}
+
+	/* ---------- Footer ---------- */
+	.footer-container {
+		padding: 1.5rem;
+		gap: 1rem;
+	}
+	.footer-contact,
+	.footer-social-links,
+	.footer-logo {
+		min-width: 100%;
+		padding-right: 0;
+		border-right: none;
+	}
+}
+
+/* -----------------------
+   Small phones (<= 576px)
+   Aggressive scaling for readability
+   ----------------------- */
+@media (max-width: 576px) {
+	/* Header */
+	.header-container {
+		padding: 8px;
+		border-radius: 18px;
+	}
+
+	.logo-section img {
+		width: 48px;
+		height: 48px;
+	}
+
+	.register-button {
+		padding: 0.45rem 0.8rem;
+		font-size: 0.95rem;
+	}
+
+	/* Hero */
+	.hero-section {
+		min-height: 60vh;
+		margin-top: -60px;
+	}
+
+	.hero-title {
+		font-size: 1.6rem;
+	}
+
+	.hero-tagline {
+		font-size: 0.95rem;
+	}
+
+	.hero-overlay-box {
+		padding: 0.8rem;
+	}
+
+	.hero-detail-label,
+	.hero-detail-value {
+		font-size: 0.9rem;
+		padding: 0.25rem 0.45rem;
+	}
+
+	.hero-bottom-left {
+		font-size: 0.9rem;
+		padding: 0.6rem;
+	}
+
+	/* block images stack vertically */
+	.block-one-images {
+		flex-direction: column;
+	}
+
+	.block-one-images .block-img {
+		width: 100%;
+	}
+
+	/* horizontal scroll smaller cards */
+	.scroll-item {
+		width: 92vw;
+		height: auto;
+		min-height: 260px;
+	}
+
+	.scroll-item.text-item.item-3 p {
+		font-size: 3.2rem;
+	}
+
+	/* schedule compact */
+	.schedule-title {
+		font-size: 4.5rem;
+	}
+
+	.time {
+		font-size: 1.6rem;
+	}
+
+	.schedule-item {
+		padding: 0.9rem;
+	}
+
+	/* form */
+	.form-container {
+		width: 96%;
+		padding: 16px;
+	}
+
+	.form-title {
+		font-size: 1.8rem;
+	}
+
+	.input-box .details,
+	.gift-option {
+		font-size: 1.05rem;
+	}
+
+	/* footer compact */
+	.footer-container {
+		padding: 1rem;
 	}
 }
